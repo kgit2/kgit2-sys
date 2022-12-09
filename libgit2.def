@@ -1,4 +1,13 @@
-headers = git2.h
-staticLibraries = libgit2.a libssh2.a libssl.a libcrypto.a libiconv.a libz.a
-libraryPaths = /Users/bppleman/kgit2/kgit2-sys/build/dist/libgit2/lib /Users/bppleman/kgit2/kgit2-sys/build/dist/libssh2/lib /opt/homebrew/opt/openssl@3/lib
+headers = git2.h git2/reflog.h git2/sys/reflog.h git2/sys/odb_backend.h git2/sys/mempack.h git2/sys/repository.h
+staticLibraries = libgit2.a libssh2.a libssl.a libcrypto.a libz.a
+libraryPaths = /Users/bppleman/kgit2/kgit2-sys/build/dist/libgit2/lib /Users/bppleman/kgit2/kgit2-sys/build/dist/libssh2/lib /Users/bppleman/kgit2/kgit2-sys/build/dist/openssl/lib /Users/bppleman/kgit2/kgit2-sys/build/dist/zlib/lib
 compilerOpts = -I/Users/bppleman/kgit2/kgit2-sys/build/dist/libgit2/include
+linkerOpts = -L/Users/bppleman/kgit2/kgit2-sys/build/dist/libgit2/lib -L/Users/bppleman/kgit2/kgit2-sys/build/dist/libssh2/lib -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib -lgit2 -framework CoreFoundation -framework Security -lssh2 -lz -liconv
+
+noStringConversion = git_attr_value git_mailmap_from_buffer
+
+---
+
+const char *git_attr__true  = "[internal]__TRUE__";
+const char *git_attr__false = "[internal]__FALSE__";
+const char *git_attr__unset = "[internal]__UNSET__";
