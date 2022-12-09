@@ -1,0 +1,4 @@
+headers = git2.h
+staticLibraries = libgit2.a libssh2.a libssl.a libcrypto.a libiconv.a libz.a
+libraryPaths = /Users/bppleman/kgit2/kgit2-sys/build/dist/libgit2/lib /Users/bppleman/kgit2/kgit2-sys/build/dist/libssh2/lib /opt/homebrew/opt/openssl@3/lib
+compilerOpts = -I/Users/bppleman/kgit2/kgit2-sys/build/dist/libgit2/include
